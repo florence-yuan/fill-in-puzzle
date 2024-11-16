@@ -1,70 +1,34 @@
-# Getting Started with Create React App
+# Fill-in Puzzle Created with React
+**[Try Out the Live Demo](https://florence-yuan.github.io/fill-in-puzzle/)**
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Image of Puzzle](https://github.com/user-attachments/assets/e0f4ad29-831e-40bb-a8ec-f91946d055cc)
 
-## Available Scripts
+Fill in all the words to complete the crossword!  Every non-shaded square is part of at least one word, though some land at the crossroads of two.
 
-In the project directory, you can run:
+## Notes on Usage
+Yellow square = cursor (current square)
 
-### `npm start`
+Blue squares = possible word space
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Click on the square you want your cursor to go to, or use the _arrow keys_ to navigate around.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Type to fill in the squares, and use _Backspace_ to delete characters.
 
-### `npm test`
+_If you type, cursor will automatically move to the next square in the blue block_
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Click a square to change its typing orientation (eg. horizontal to vertical).
 
-### `npm run build`
+The words you have used are crossed out in the word list on the right.  When there are only five more words left to go, you get a special highlight effect.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+If you win or run out of time, you will have the option to restart the game or try another (random) crossword.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Tools
+**Colorize:** Colorize all squares that are supposed to hold the same character _(Note: May conflict with the words you have entered if they do not correspond to the answer)_
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**Timer:** Click to start and pause timer _(Note: Configure timer duration in 'Settings')_
 
-### `npm run eject`
+**Settings:** Opens settings for game mode / timer length / restart options.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+**Easy Length Search:** Click on the headings in the word list to highlight all available space in the crossword that form blocks of the corresponding length. _(See Below)_
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![Image of Puzzle with Highlights](https://github.com/user-attachments/assets/2b48125b-5669-4acb-b017-926fa5056ac8)
