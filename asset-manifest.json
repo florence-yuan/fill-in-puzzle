@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/fill-in-puzzle/static/css/main.300bb210.css",
+    "main.js": "/fill-in-puzzle/static/js/main.1b69153b.js",
+    "static/js/787.5d00dfec.chunk.js": "/fill-in-puzzle/static/js/787.5d00dfec.chunk.js",
+    "static/media/settings.svg": "/fill-in-puzzle/static/media/settings.5d2d26582a536270cf3436f0a04e9d54.svg",
+    "index.html": "/fill-in-puzzle/index.html",
+    "static/media/check.svg": "/fill-in-puzzle/static/media/check.e20ddc3731c1ed8a01ee8e8a52c3bdb1.svg",
+    "static/media/cross.svg": "/fill-in-puzzle/static/media/cross.ee4732446d4a72576a8d23a9e09e3b33.svg",
+    "static/media/timer.svg": "/fill-in-puzzle/static/media/timer.171bd59fe44f12f309d28eb97c5aecf7.svg",
+    "static/media/colorize.svg": "/fill-in-puzzle/static/media/colorize.d4b4f0b936e8879b745918ac112249fb.svg",
+    "static/media/check__blue.svg": "/fill-in-puzzle/static/media/check__blue.5b2735c37770ee2673d2.svg",
+    "static/media/close.svg": "/fill-in-puzzle/static/media/close.1ded1e99216871d2a3ae.svg",
+    "main.300bb210.css.map": "/fill-in-puzzle/static/css/main.300bb210.css.map",
+    "main.1b69153b.js.map": "/fill-in-puzzle/static/js/main.1b69153b.js.map",
+    "787.5d00dfec.chunk.js.map": "/fill-in-puzzle/static/js/787.5d00dfec.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.300bb210.css",
+    "static/js/main.1b69153b.js"
+  ]
+}
