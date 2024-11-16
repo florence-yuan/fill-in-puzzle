@@ -23,7 +23,7 @@ The words you have used are crossed out in the word list on the right.  When the
 If you win or run out of time, you will have the option to restart the game or try another (random) crossword.
 
 ## Tools
-**Colorize:** Colorize all squares that are supposed to hold the same character _(Note: May conflict with the words you have entered if they do not correspond to the answer)_
+**Colorize:** Colorize all squares that are supposed to hold the same character _(Note: May conflict with the words you have entered if they do not correspond with the answer)_
 
 **Timer:** Click to start and pause timer _(Note: Configure timer duration in 'Settings')_
 
