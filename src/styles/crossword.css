@@ -1,0 +1,160 @@
+.crossword-grid {
+	position: relative;
+	display: grid;
+	grid-template-columns: repeat(15, max-content);
+	grid-template-rows: repeat(15, max-content);
+	color: var(--dark-gray);
+	border-top: 1px solid var(--dark-gray);
+	border-left: 1px solid var(--dark-gray);
+	user-select: none;
+	outline: none;
+	background-color: white;
+	z-index: 10;
+}
+
+body.select-square .crossword-grid {
+	z-index: 250;
+}
+
+.crossword__square {
+	position: relative;
+	width: 2.5rem;
+	height: 2.5rem;
+	border-bottom: 1px solid var(--dark-gray);
+	border-right: 1px solid var(--dark-gray);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    background-color: white;
+}
+
+body.select-square .crossword__square--cs:hover {
+	box-shadow: inset 0px 0px 0px 3px var(--dark-gray);
+	cursor: cell;
+}
+
+.crossword__square--shaded {
+	background-color: currentColor;
+}
+
+.square__bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	transform: scale(0.5);
+}
+
+.crossword__square--highlighted {
+	background-color: var(--light-blue);
+}
+
+.crossword__square--focused {
+	background-color: var(--light-yellow) !important;
+}
+
+.crossword__square--wrong::before {
+	content: "";
+	width: 140%;
+	height: 0px;
+	border-bottom: 4px solid #818181;
+	position: absolute;
+	top: -1px;
+	right: 1px;
+	transform-origin: top right;
+	transform: rotate(-45deg);
+}
+
+.square__num {
+	position: absolute;
+	top: 0.1em;
+	left: 0.2em;
+	font-size: 0.8rem;
+	color: var(--dark-gray);
+}
+
+.square__letter {
+	position: relative;
+	top: 0.1em;
+	font-size: 1.3rem;
+	text-transform: uppercase;
+	line-height: 1;
+}
+
+/* Highlight */
+
+.crossword__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+	opacity: 0;
+	pointer-events: none;
+    z-index: 0;
+	transition: all 0.25s ease-in-out;
+}
+
+body.highlight .crossword__bg {
+	opacity: 1;
+	pointer-events: all;
+    z-index: 10;
+}
+
+body.highlight3 .len3 {
+    z-index: 100;
+}
+
+body.highlight4 .len4 {
+    z-index: 100;
+}
+
+body.highlight5 .len5 {
+    z-index: 100;
+}
+
+body.highlight6 .len6 {
+    z-index: 100;
+}
+
+body.highlight7 .len7 {
+    z-index: 100;
+}
+
+body.highlight8 .len8 {
+    z-index: 100;
+}
+
+body.highlight9 .len9 {
+    z-index: 100;
+}
+
+body.highlight10 .len10 {
+    z-index: 100;
+}
+
+body.highlight11 .len11 {
+    z-index: 100;
+}
+
+body.highlight12 .len12 {
+    z-index: 100;
+}
+
+body.highlight13 .len13 {
+    z-index: 100;
+}
+
+body.highlight14 .len14 {
+    z-index: 100;
+}
+
+body.highlight15 .len15 {
+    z-index: 100;
+}

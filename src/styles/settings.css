@@ -1,0 +1,313 @@
+.settings {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.2s ease-in-out;
+}
+
+body.settings-on .settings {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.settings__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: -1;
+}
+
+.settings__inner {
+    position: relative;
+    width: 25rem;
+    height: 35rem;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
+    transform: scale(0.95);
+    transition: inherit;
+}
+
+body.settings-on .settings__inner {
+    transform: none;
+}
+
+.settings__close {
+    all: unset;
+    position: absolute;
+    top: 1.2rem;
+    right: 1.4rem;
+    width: 3rem;
+    height: 3rem;
+    background-image: url("../icons/close.svg");
+    background-position: center;
+    background-size: 60%;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    transition: all 0.2s ease-in-out;
+}
+
+.settings__close:hover {
+    background-color: #eee;
+    cursor: pointer;
+}
+
+.settings__close:active {
+    background-color: #ddd;
+}
+
+.settings__heading {
+    width: 100%;
+    padding: 2rem 2rem 1.5rem;
+    font-weight: normal;
+    font-size: 1.5rem;
+    border-bottom: 1px solid gainsboro;
+}
+
+.settings__panel {
+    width: 100%;
+    padding: 1.5rem 2rem;
+}
+
+.settings__panel + .settings__panel {
+    border-top: 1px solid gainsboro;
+}
+
+.settings__panel--flex .panel__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.panel__label {
+    font-size: 1.1rem;
+}
+
+.panel__desc {
+    margin-top: 1rem;
+    color: rgb(99, 99, 99);
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.9rem;
+    letter-spacing: 0.01rem;
+    line-height: 1.5;
+}
+
+.settings__switch {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 3.3rem;
+    height: 1.8rem;
+    padding: 0 0.4rem;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.settings__track {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ddd;
+    border-radius: 20px;
+    border: 2px solid gray;
+    transition: 0.2s ease-in-out;
+    color: var(--medium-blue);
+    z-index: -1;
+}
+
+.settings__switch:hover > .settings__checkbox:not(:checked) + .settings__track {
+    background-color: #ccc !important;
+}
+
+.settings__switch:hover > .settings__checkbox:checked + .settings__track {
+    background-color: var(--medium-blue2) !important;
+}
+
+.settings__checkbox:checked + .settings__track {
+    background-color: currentColor;
+    border-color: currentColor;
+}
+
+.settings__checkbox {
+    all: unset;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    width: 1.4rem;
+    height: 1.4rem;
+    background-color: gray;
+    border-radius: 50%;
+    transform-origin: left;
+    transform: scale(0.8);
+    transition: all 0.3s cubic-bezier(.8,-0.51,.03,1.48);
+}
+
+.settings__switch:active > .settings__checkbox {
+    transform: scale(0.7);
+}
+
+.settings__switch:active > .settings__checkbox:checked {
+    transform: scale(0.9) translateX(-100%);
+}
+
+.settings__checkbox::before {
+    content: "";
+    display: block;
+    width: 1.1rem;
+    height: 1.1rem;
+    background-image: url("../icons/check__blue.svg");
+    background-size: contain;
+    background-position: center;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.settings__checkbox:checked {
+    left: calc(100% + 3px);
+    background-color: white;
+    transform: translateX(-100%);
+}
+
+.settings__checkbox:checked::before {
+    opacity: 1;
+}
+
+/* Timer */
+
+.timer-opts {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.timer-opt {
+    display: flex;
+    align-items: center;
+}
+
+.opt__label {
+    font-size: 1.1rem;
+    padding-left: 0.3rem;
+    cursor: pointer;
+    letter-spacing: 0.01rem;
+}
+
+.opt__radio {
+    all: unset;
+    position: relative;
+    width: 1.2rem;
+    height: 1.2rem;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.opt__radio:not(:checked):hover {
+    border-color: #aaa;
+}
+
+.opt__radio:checked {
+    border-color: var(--medium-blue);
+}
+
+.opt__radio::before {
+    content: "";
+    display: block;
+    width: 0.7rem;
+    height: 0.7rem;
+    background-color: var(--medium-blue);
+    border-radius: inherit;
+    transform: scale(0);
+    opacity: 0;
+    transition: inherit;
+}
+
+.opt__radio:checked::before {
+    transform: none;
+    opacity: 1;
+}
+
+.time-opt--custom {
+    margin-top: 0.75rem;
+}
+
+.custom__label {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    line-height: 1;
+}
+
+.custom__inner {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.custom__field {
+    width: 2rem;
+    font-size: 1rem;
+    font-family: 'Roboto Mono', monospace;
+    text-align: center;
+    padding: 0.1rem 0.2rem 0.15rem;
+}
+
+/* Restart */
+
+.settings__panel--list {
+    display: flex;
+    gap: 0.7rem;
+    justify-content: right;
+}
+
+.restart-btn {
+    all: unset;
+    font-size: 1.1rem;
+    padding: 0.6em 1em 0.5em;
+    border-radius: 20px;
+    user-select: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.restart-btn:hover {
+    cursor: pointer;
+    background-color: var(--light-blue3);
+}
+
+.restart-btn:nth-child(1) {
+    background-color: white;
+    color: var(--medium-blue);
+    border: 1px solid var(--medium-blue)
+}
+
+.restart-btn:nth-child(1):hover {
+    background-color: var(--light-blue3);
+}
+
+.restart-btn:nth-child(2) {
+    background-color: var(--medium-blue);
+    color: white;
+}
+
+.restart-btn:nth-child(2):hover {
+    background-color: var(--medium-blue2);
+}

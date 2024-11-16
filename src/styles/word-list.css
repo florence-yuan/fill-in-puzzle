@@ -1,0 +1,131 @@
+/* List of words */
+
+.word-list-wrapper {
+	width: calc(20vw + 5rem);
+	max-height: 100%;
+}
+
+@media (max-width: 1150px) {
+	.word-list-wrapper {
+		margin-top: 2rem;
+        width: 100%;
+	}
+}
+
+.list__tip {
+	display: flex;
+	align-items: center;
+	gap: 0.7rem;
+	position: relative;
+	font-size: 1.3em;
+	margin-bottom: 1em;
+	color: var(--purple);
+	font-weight: bold;
+}
+
+.tip__bar {
+	display: inline-block;
+	height: 1.2em;
+	background-color: currentColor;
+}
+
+.word-list {
+	width: 100%;
+	column-width: 6rem;
+	column-gap: 1rem;
+}
+
+@media (max-width: 1150px) {
+	.word-list {
+        column-width: calc(6rem + 2vw);
+	}
+}
+
+.word-list h1 {
+	user-select: none;
+	width: max-content;
+	font-size: 1.1rem;
+	margin-bottom: 0.5em;
+	padding: 0.3em 0em 0.2em;
+}
+
+.word-list h1:hover {
+	cursor: cell;
+	background-color: var(--light-blue2);
+}
+
+.list__section {
+	position: relative;
+	width: 100%;
+	min-width: max-content;
+	margin-bottom: 1rem;
+	padding: 0.3em 0.6em 0.6em;
+}
+
+.list__section--highlight {
+	background-color: white;
+	z-index: 10;
+}
+
+.list__word {
+	position: relative;
+	--bg: var(--medium-purple);
+	background-image: linear-gradient(to right, var(--bg) 0%, var(--bg) 50%, transparent 50%, transparent 100%);
+	background-size: 203%;
+	background-position-x: 100%;
+	width: max-content;
+	text-transform: uppercase;
+	transition: all 0.2s ease-in-out;
+}
+
+.list__word + .list__word {
+	margin-top: 0.3em;
+}
+
+.list__word::before {
+	content: "";
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	left: 0%;
+	width: 100%;
+	height: 0;
+	border-bottom: 1px solid currentColor;
+	transform: scaleX(0);
+	transform-origin: right;
+	transition: transform 0.25s ease-in-out;
+	transition-delay: 0.1s;
+}
+
+.word-list.highlight .list__word::before {
+	transition-delay: 0.2s;
+}
+
+@keyframes slide {
+	to {
+		background-position-x: 1;
+	}
+}
+
+.word-list.highlight .list__word--show {
+	background-position-x: 0%;
+}
+
+.list__word--hidden {
+	color: #cccccc;
+}
+
+.list__word--hidden::before {
+	transform: none;
+}
+
+.list__footer {
+	display: block;
+	max-width: 23rem;
+	padding-left: 1em;
+	margin-left: auto;
+	margin-top: 2.5rem;
+	margin-right: -2em;
+	line-height: 1.5;
+	color: rgb(100, 100, 100);
+}
