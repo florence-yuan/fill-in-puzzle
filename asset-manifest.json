@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/fill-in-puzzle/static/css/main.300bb210.css",
-    "main.js": "/fill-in-puzzle/static/js/main.1b69153b.js",
+    "main.js": "/fill-in-puzzle/static/js/main.1bc991ee.js",
     "static/js/787.5d00dfec.chunk.js": "/fill-in-puzzle/static/js/787.5d00dfec.chunk.js",
     "static/media/settings.svg": "/fill-in-puzzle/static/media/settings.5d2d26582a536270cf3436f0a04e9d54.svg",
     "index.html": "/fill-in-puzzle/index.html",
@@ -12,11 +12,11 @@
     "static/media/check__blue.svg": "/fill-in-puzzle/static/media/check__blue.5b2735c37770ee2673d2.svg",
     "static/media/close.svg": "/fill-in-puzzle/static/media/close.1ded1e99216871d2a3ae.svg",
     "main.300bb210.css.map": "/fill-in-puzzle/static/css/main.300bb210.css.map",
-    "main.1b69153b.js.map": "/fill-in-puzzle/static/js/main.1b69153b.js.map",
+    "main.1bc991ee.js.map": "/fill-in-puzzle/static/js/main.1bc991ee.js.map",
     "787.5d00dfec.chunk.js.map": "/fill-in-puzzle/static/js/787.5d00dfec.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.300bb210.css",
-    "static/js/main.1b69153b.js"
+    "static/js/main.1bc991ee.js"
   ]
 }
